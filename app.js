@@ -2,10 +2,6 @@ const parallax_el = document.querySelectorAll('.parallax');
 const main = document.querySelector('main')
 
 function startParallax() {
-    parallax_el.forEach((e) => {
-        e
-    })
-
     let xValue = 0, yValue = 0;
 
     let rotateDegree = 0;
