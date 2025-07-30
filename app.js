@@ -63,37 +63,37 @@ window.addEventListener('resize', setMainHeight); // Panggil saat ukuran jendela
 
 /* ꘏꘏꘏꘏꘏꘏꘏꘏꘏ GSAP ANIMATION ꘏꘏꘏꘏꘏꘏꘏꘏꘏ */
 
-// let timeline = gsap.timeline({
-//     onComplete: startParallax
-// });
+let timeline = gsap.timeline({
+    onComplete: startParallax
+});
 
-// Array.from(parallax_el)
-//     .filter((el) => !el.classList.contains("text"))
-//     .forEach(el => {
-//         timeline.from(
-//             el,
-//             {
-//                 duration: 3.5,
-//                 top: `${el.dataset.distance - el.offsetHeight / 2}px`,
-//                 ease: "power3.out"
-//             },
-//             "<"
-//         )
-//     });
+Array.from(parallax_el)
+    .filter((el) => !el.classList.contains("text"))
+    .forEach(el => {
+        timeline.from(
+            el,
+            {
+                duration: 3.5,
+                top: `${el.dataset.distance - el.offsetHeight / 2}px`,
+                ease: "power3.out"
+            },
+            "<"
+        )
+    });
 
-// timeline.from(".text h1", {
-//     y: window.innerHeight - document.querySelector(".text h1").getBoundingClientRect().top,
-//     duration: 2,
-//     ease: "power2.out"
-// }, 2.5
-// ).from(".text h2", {
-//     y: -150,
-//     opacity: 0,
-//     duration: 1.5,
-//     ease: "power2.out"
-// }, 3
-// ).from(".hide", {
-//     opacity: 0,
-//     duration: 1.5
-// }, 3
-// )
+timeline.from(".text h1", {
+    y: window.innerHeight - document.querySelector(".text h1").getBoundingClientRect().top,
+    duration: 2,
+    ease: "power2.out"
+}, 2.5
+).from(".text h2", {
+    y: -150,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out"
+}, 3
+).from(".hide", {
+    opacity: 0,
+    duration: 1.5
+}, 3
+)
